@@ -1,0 +1,70 @@
+/* Fondo general */
+html, body {
+  height: 100%;
+  background: radial-gradient(1200px 800px at 20% 10%, #faf6ee 0%, #f2efe9 40%, #ece9e2 100%);
+  color: #1f1f1f;
+}
+
+/* Contenedor de puertas flotantes */
+.floating-doors .door {
+  position: fixed;
+  font-size: 40px;
+  opacity: 0.18;
+  animation: float 12s ease-in-out infinite;
+  z-index: 0;
+  filter: blur(0.2px);
+}
+
+/* Variantes de posición */
+.floating-doors .d1 { top: 8%;  left: 6%;  animation-delay: 0s; }
+.floating-doors .d2 { top: 20%; right: 10%; animation-delay: 2s; }
+.floating-doors .d3 { bottom: 12%; left: 12%; animation-delay: 4s; }
+.floating-doors .d4 { bottom: 22%; right: 18%; animation-delay: 6s; }
+.floating-doors .d5 { top: 45%; left: 45%; animation-delay: 1s; }
+
+/* Flotación suave */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(-2deg); }
+}
+
+/* Elevar el contenido por encima del fondo flotante */
+main.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Acordeón estilizado */
+.accordion-item {
+  border: 1px solid #e8e3d9;
+  border-radius: 10px !important;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background: #fffdf8;
+}
+
+.accordion-button {
+  background: #fffdf8;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #1d1a16;
+  background-color: #fff9ef;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
+}
+
+.accordion-body {
+  background: #fffefb;
+  line-height: 1.6;
+}
+
+.btn-dark {
+  background-color: #1f1b16;
+  border-color: #1f1b16;
+}
+
+footer {
+  opacity: 0.7;
+}
